@@ -7,7 +7,7 @@
     <input type="search" class="form-control" #amountEntered="ngModel" name="amount" 
     [(ngModel)]="amount" placeholder="Amount" pattern="^\s*(?=.*[1-9])\d*(?:\.\d{1,2})?\s*$"required  >   </div>
     <small class="help-block" *ngIf="(amountEntered.errors?.pattern && amountEntered.touched)||amountEntered.errors?.required">
-        Amount I have
+       Please enter amount you have
     </small>
     <div class="form-group">
     <label for="exampleFormControlSelect1">Currency I have</label>
