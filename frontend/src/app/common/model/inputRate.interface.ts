@@ -1,4 +1,4 @@
-export class  inputRate
+export interface  inputRate
 {
     amount: number;
     type: string;
