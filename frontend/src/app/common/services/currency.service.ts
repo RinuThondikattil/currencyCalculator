@@ -10,7 +10,7 @@ export class CurrencyService {
   _currency:inputRate
   constructor( private _httpService: Http){}
 
-  convertCurrency(amount,currencytype): Observable<JSON> {
+  convertCurrency(amount,currencytype): Observable<String> {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
    this._currency={
