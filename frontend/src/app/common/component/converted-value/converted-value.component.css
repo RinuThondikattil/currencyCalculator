@@ -1,0 +1,33 @@
+
+form{
+	background:white;
+	  width: 80%;
+	  float: left;
+	  padding: 10px 15px;
+	  height: 100%;
+	  overflow-y: scroll;
+  }
+  input[type="search"],select{
+	  display: block;
+	  margin-bottom: 20px;
+	  border-radius: 5px;
+	  height:45px;
+	  padding: 0px 15px;
+	  font-size: 18px;
+	  width: 80%;
+  }
+	/*
+	input field search type cancel button limiting to only smartphones with less than 360px widthfor user story
+	*/
+  @media only screen and (max-device-width: 360px) {
+	  input[type="search"]::-webkit-search-cancel-button {
+			  -webkit-appearance: searchfield-cancel-button;
+		  }
+  
+  }
+
+  label{
+	display: block;
+	  font-size: 18px;
+  }
+ 

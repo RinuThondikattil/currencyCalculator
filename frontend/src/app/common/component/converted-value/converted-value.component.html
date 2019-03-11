@@ -1,0 +1,22 @@
+
+<br>
+<div class="container">
+<form>
+  <div class="form-group" [class.has-error]="amountEntered.invalid && amountEntered.touched">
+    <label for="exampleFormControlInput1">Amount I have</label>
+    <input type="search" class="form-control" #amountEntered="ngModel" name="amount" 
+    [(ngModel)]="amount" placeholder="Amount" pattern="^\s*(?=.*[1-9])\d*(?:\.\d{1,2})?\s*$"required  >   </div>
+    <small class="help-block" *ngIf="(amountEntered.errors?.pattern && amountEntered.touched)||amountEntered.errors?.required">
+        Amount I have
+    </small>
+    <div class="form-group">
+    <label for="exampleFormControlSelect1">Currency I have</label>
+    <select class="form-control" name="currency" [(ngModel)]="selectedCurrency" [disabled]="(amountEntered.errors?.pattern ) ||amountEntered.errors?.required" (change)="convertCurrency()">
+     
+      <option *ngFor="let currency of currencyList" [ngValue]="currency">{{currency.name}}</option>      
+    </select>
+  </div>
+
+
+</form>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+    <form>
+        <h2><img   class="logo" src="../assets/logo.png"> Curreny Trade Application</h2>
+        <div *ngIf="serverCheck"  class="alert alert-danger">
+            {{status}}<br></div>
+        <h3>USD equivalent calculator</h3>
+    <!-- Reusable convertor widget for User Story-->
+    <convertor-widget (getConvertedAmount)="getResult($event)"></convertor-widget>
+   
+      <div class="form-group">
+        <h3 for="exampleFormControlInput1"> USD equivalent Amount<img src="../assets/USFlag.jpg"></h3>
+        <input type="number" class="form-control" name="result" [(ngModel)]="result" placeholder="Amount" readonly>
+      </div>
+   
+    </form>
+  </div>
