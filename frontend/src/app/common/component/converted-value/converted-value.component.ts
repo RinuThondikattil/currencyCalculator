@@ -15,6 +15,7 @@ export class ConvertorWidget implements OnInit {
   currencyList:Array<Currency>;  
   amount;
   status;
+
   constructor( private currencyService:CurrencyService) { 
     
     this.currencyList = [
@@ -38,10 +39,10 @@ export class ConvertorWidget implements OnInit {
   }
 
   getUSDRate(){
-    this.currencyService.convertCurrency(this.amount,this.selectedCurrency.name).subscribe(response=>{
+    this.currencyService.convertCurrency(this.amount,this.selectedCurrency.name).subscribe(output=>{
      
-        if(response)
-          this.getConvertedAmount.emit({'USD':response});
+        if(output)
+          this.getConvertedAmount.emit({'USD':output});
       },
       error =>{
         this.status="Please check Server Connection";
