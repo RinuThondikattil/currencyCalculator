@@ -6,7 +6,7 @@ Instruction to set up application in Linux/Mac environment
 
 
 
-check out application from https://github.com/RinuThondikattil/currencyTrade.git
+check out application from https://github.com/RinuThondikattil/currencyCalculator.git
 
 2.To set UP FRONT-END
 
