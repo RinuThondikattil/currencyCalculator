@@ -7,7 +7,7 @@ import { inputRate } from '../model/inputRate.interface';
 export class CurrencyService {
   
   _url:string='http://localhost:8080/api/v1/currency';
-_currency:inputRate
+  _currency:inputRate
   constructor( private _httpService: Http){}
 
   convertCurrency(amount,currencytype): Observable<JSON> {
